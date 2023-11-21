@@ -16,11 +16,13 @@
         <header>
             <nav>
                 <ul class="nav_list_wrapper">
-                    <button class="hamburger" type="button">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+                    <li class="hamburger_wrap">
+                        <a class="hamburger" href="#" onclick="return false">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </li>
                     <li class="nav_list">
                         <button type="button" class="layer_link active" id="Home_link">Home</button>
                         <ul class="Sub_list ">
@@ -36,9 +38,8 @@
                     <li class="nav_list">
                         <button type="button" class="layer_link" id="Project_link">Project</button>
                         <ul class="Sub_list invisible">
-                            <li><a href="#Project" class="move_point invisible">#PJ A</a></li>
-                            <li></li>
-                            <li></li>
+                            <li><a href="#food_with_IR" class="move_point invisible">#Project A</a></li>
+                            <li><a href="#food_with" class="move_point invisible">#Project B</a></li>
                         </ul>
                     </li>
                     <li class="nav_list">
@@ -80,19 +81,30 @@
                 <p>정진영 날짜</p>
 
                 <p>제가 작업한 작업물 입니다.</p>
-                <article>
-                    <a href="./html/Project_C_main.html" target="_blank" class="move_portfolio">
-                        <img src="./image/food_with_thumnail.png" alt="food with homepage thumbnail image"
-                            class="thumbnail"></a>
-                            <h2>food with 홈페이지</h2>
-                </article>
-                <article>
+
+                <article id="food_with_IR">
                     <a href="./html/Project_B.html" target="_blank" class="move_portfolio">
                         <img src="image/food_with_IR_thumnail.png" alt="food with food thumbnail image"
-                            class="thumbnail"></a>
-                            <h2>food with </h2>
+                            class="thumbnail">
+                    </a>
+                    <div class="flex">
+                        <h2>food with 초대 홈페이지</h2>
+                        <p>사용 프로그램 : HTML, CSS, Javascript</p>
+                        <p></p>
+                    </div>
                 </article>
+                <article id="food_with">
+                    <a href="./html/Project_C_main.html" target="_blank" class="move_portfolio">
+                        <img src="./image/food_with_thumnail.png" alt="food with homepage thumbnail image"
+                            class="thumbnail">
+                    </a>
+                    <div class="flex">
+                        <h2>food with 홈페이지</h2>
+                        <p>사용 프로그램 : HTML, CSS, Javascript</p>
+                        <p></p>
 
+                    </div>
+                </article>
             </div>
             <div class="comment" id="Contact">
                 <img src="./image/min.png" alt="" class="profill">
@@ -100,15 +112,14 @@
                 <p>아래로 연락해주시면 감사하겠습니다.</p>
 
                 <p><a href='tel:010-3133-3593'><img src="./image/phone.png" alt="전화 이미지"
-                            class="tool_image">010-3133-3593</a></p>
+                            class="contact_image">010-3133-3593</a></p>
                 <p><a href="mailto:0523nada@gmail.com"><img src="./image/email.png" alt="이메일 이미지"
-                            class="tool_image">0523nada@gmail.com</a></p>
+                            class="contact_image">0523nada@gmail.com</a></p>
             </div>
         </main>
-        <foot></foot>
     </div>
+    <script src="./js/index.js"></script>
+    <!-- <footer>&copy; 2023. 정진영. All rights reserved.</footer> -->
 </body>
-<!-- <footer>&copy; 2023. 정진영. All rights reserved.</footer> -->
-<script src="./js/index.js"></script>
 
 </html>

@@ -4,7 +4,7 @@
 
 a {
     text-decoration: none;
-    display : block;
+    display: block;
 }
 
 button {
@@ -28,7 +28,6 @@ html {
 *:after {
     box-sizing: inherit;
 }
-
 
 
 body {
@@ -264,9 +263,10 @@ nav {
 
 }
 
-.comment {
+.comment,
+article {
     margin: 20px 0px;
-    min-height : 40px;
+    min-height: 40px;
 }
 
 .comment p,
@@ -274,22 +274,56 @@ nav {
     padding-left: 60px;
 }
 
-.skill_image,
-.tool_image {
-    width: 50px;
-    height : 50px;
+
+.flex {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    max-width: 60%;
+    /* justify-content: center; */
+    align-items: center;
 }
 
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    /* flex-grow : 1; */
+}
+
+
+.flex p {
+    flex-grow: 1;
+    padding: 0px;
+    margin: 5px;
+
+}
+
+.skill_image,
+.tool_image,
+.contact_image {
+    width: 50px;
+    height: 50px;
+}
+
+.skill_image:nth-of-type(2),
+.tool_image{
+    padding-left: 60px;
+    width: 110px;
+}
+
+
 .move_portfolio {
-    display : block;
-    width : 40%;
-    position : relative;
+    display: block;
+    width: 40%;
+    position: relative;
 }
 
 .thumbnail {
-    position:relative;
-    width : 100%;
-    
+    position: relative;
+    width: 100%;
+
 }
 
 .hamburger {
@@ -333,7 +367,7 @@ nav {
 /* type-01 */
 /* 중앙 라인이 고정된 자리에서 투명하게 사라지며 상하라인 회전하며 엑스자 만들기 */
 .hamburger.active span:nth-of-type(1) {
-    -webkit-transform: translateY (13px) rotate (-45deg);
+    -webkit-transform: translateY(13px) rotate(-45deg);
     transform: translateY(13px) rotate(-45deg);
 }
 
@@ -354,13 +388,16 @@ nav {
     clip: rect(0 0 0 0);
     margin: -1px;
     overflow: hidden;
-    padding:0px;
+    padding: 0px;
 }
 
 article {
-    display : flex;
+    display: flex;
     flex-direction: row;
+    width: 100%;
 }
+
+
 
 @media screen and (max-width:850px) {
 
@@ -371,60 +408,58 @@ article {
 
 /* @media screen and (max-width:600px) { */
 
-    .hamburger,
-    .hamburger span {
-        display: inline-block;
-    }
+.hamburger,
+.hamburger span {
+    display: inline-block;
+}
 
-    header {
-        position: relative;
-        z-index: 10000;
-        height: initial;
-        transition: all 0.2s;
-        width: 0px;
-    }
+header {
+    position: relative;
+    z-index: 10000;
+    height: initial;
+    transition: all 0.2s;
+    width: 0px;
+}
 
-    .main {
-        right: 0px;
-        left: 0px;
-        width: 100%;
-    }
+.main {
+    right: 0px;
+    left: 0px;
+    width: 100%;
+}
 
-    nav {
-        position: relative;
-        right: 72px;
-    }
+nav {
+    position: relative;
+    right: 72px;
+}
 
-    .nav_list {
-        width: 0px;
-        transition: all 0.2s;
-        opacity: 0;
-        /* transform : translateX(-100px); */
-    }
+.nav_list {
+    width: 0px;
+    transition: all 0.2s;
+    opacity: 0;
+}
 
-    .hamburger.active~.nav_list {
-        width: 48px;
-        transition: all 0.2s;
-        opacity: 1;
-        /* transform : translateX(0px); */
+.hamburger_wrap.active~.nav_list {
+    width: 48px;
+    transition: all 0.2s;
+    opacity: 1;
 
-    }
+}
 
-    .Sub_list {
-        transition: all 0.2s;
+.Sub_list {
+    transition: all 0.2s;
 
-    }
+}
 
-    .main {
-        transition: all 0.2s;
-        border-top-left-radius: 12px;
-        margin-right: 0px;
+.main {
+    transition: all 0.2s;
+    border-top-left-radius: 12px;
+    margin-right: 0px;
 
-    }
+}
 
-    .main.active {
-        transform: translateX(-311px);
-    }
+.main.active {
+    transform: translateX(-311px);
+}
 
 
 /* } */

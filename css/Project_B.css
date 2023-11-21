@@ -207,16 +207,6 @@ header a {
 }
 
 
-.section_recipe {
-    background-image: url(/image/foodwith_IR/section_recipe.png);
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    position: relative;
-}
-
 .recipe {
     min-width: 980px;
     height: 1030px;
@@ -227,6 +217,17 @@ header a {
     background-color: #b893f9;
 
 }
+
+
+.section_recipe {
+    background-image: url(/image/foodwith_IR/section_recipe.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
 
 .go_recipe {
     display: inline-block;
@@ -240,12 +241,12 @@ header a {
 
 .cake {
     top: 374px;
-    left: 119px;
+    left: calc(50% - 490px);
 }
 
 .pudding {
     top: 374px;
-    left: 619px;
+    left: calc(50% + 10px);
 }
 
 .more_recipe {
@@ -273,6 +274,7 @@ header a {
     height: 1px;
     margin: -1px;
     overflow: hidden;
+    transition: all 0.3s;
 }
 
 
@@ -304,7 +306,7 @@ header a {
     border-top: 1px solid #a1a5ad;
     padding: 20px 40px;
     position: relative;
-
+    cursor : pointer;
 }
 
 .Question:before {
@@ -320,25 +322,20 @@ header a {
 }
 
 .Question.active::after {
-    background-image: url(/image/foodwith_IR/icon_arrow_up.gif);
     content: '';
     display: inline-block;
-    width: 23px;
-    height: 100%;
-    right: 10px;
-    top: 50%;
-    transform: translatey(-50%);
-    position: absolute;
-    background-repeat:no-repeat;
-    background-position:center;
+    transform: rotate(180deg) translatey(50%);
+
 }
 
 .Question::after {
     background-image: url(/image/foodwith_IR/icon_arrow_down.gif);
+
+
     content: '';
     display: inline-block;
     width: 23px;
-    height: 100%;
+    height: 12px;
     right: 10px;
     top: 50%;
     transform: translatey(-50%);
@@ -346,6 +343,8 @@ header a {
     cursor : pointer;
     background-repeat:no-repeat;
     background-position:center;
+    transition:  all 0.3s;
+
 }
 
 
