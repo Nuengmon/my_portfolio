@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Project_C_main.css">
+    <title>Project_C</title>
+</head>
+
+<body>
+    <header>
+        <div class="header_wrap">
+            <a href="#" class="logo_link">
+                <div class="logo">
+                    <h1 class="offscreen">foodwith</h1>
+                </div>
+            </a>
+            <input type="button" value=" " class="hamburger">
+            <nav>
+                <ul class="menu">
+                    <li class="menu_list">
+                        <a href="#" class="menu_item">About
+                        </a>
+
+                    </li>
+                    <li class="menu_list">
+                        <a href="#" class="menu_item">Work
+                        </a>
+
+                    </li>
+                    <li class="menu_list">
+                        <a href="#" class="menu_item">Contact
+                        </a>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div class="main_banner">
+            <a href="./Project_C_view.html" class="banner_wrap" target="_blank">
+                <img src="../image/foodwith/banner_strawberry.png" alt="시럽에 빠진 딸기 이미지" class="strawberry">
+                <p class="banner_text">
+                    오븐 없이도 베이킹 가능! 달콤 상큼 봄맞이 노오븐 딸기 케이크 만들기!
+                </p>
+                <div class="customer_wrap">
+                    <img src="../image/foodwith/thumbnail_profile.jpg" alt="사용자 프로필 사진" class="profile">
+                    <p class="customer">FULLMOON</p>
+                </div>
+            </a>
+
+
+
+        </div>
+        <div class="ingredients_wrap">
+            <ul class="ingredients_list">
+                <li class="ingredients">
+                    <a href="#" class="ingredients_link">
+                        <div class="dimmed_layout">
+                            <img src="../image/foodwith/thumbnail_pumpkin.jpg" alt="호박의 사진" class="ingredients_image">
+                        </div>
+                        <p class="ingredients_recipe">따뜻 담백 호박! 든든한 호박죽으로 한끼 해결하세요!</p>
+                    </a>
+                </li>
+                <li class="ingredients">
+                    <a href="#" class="ingredients_link">
+                        <div class="dimmed_layout">
+                            <img src="../image/foodwith/thumbnail_lime.jpg" alt="라임의 사진" class="ingredients_image">
+                        </div>
+                        <p class="ingredients_recipe">상큼한 라임청 담기</p>
+                    </a>
+                </li>
+                <li class="ingredients">
+                    <a href="#" class="ingredients_link">
+                        <div class="dimmed_layout">
+                            <img src="../image/foodwith/thumbnail_paprika.jpg" alt="빨간 피망의 사진"
+                                class="ingredients_image">
+                        </div>
+                        <p class="ingredients_recipe">아삭아삭 빨간 피망 볶음 레시피</p>
+                    </a>
+                </li>
+                <li class="ingredients">
+                    <a href="#" class="ingredients_link">
+                        <div class="dimmed_layout">
+                            <img src="../image/foodwith/thumbnail_garlic.jpg" alt="마늘의 사진" class="ingredients_image">
+                        </div>
+                        <p class="ingredients_recipe">바삭바삭 마늘빵 만들기</p>
+                    </a>
+                </li>
+                <li class="ingredients">
+                    <a href="#" class="ingredients_link">
+                        <div class="dimmed_layout">
+                            <img src="../image/foodwith/thumbnail_onion.jpg" alt="적양파의 사진" class="ingredients_image">
+                        </div>
+                        <p class="ingredients_recipe">자색 빛깔 적양파 피클 담기</p>
+                    </a>
+                </li>
+                <li class="ingredients">
+                    <a href="#" class="ingredients_link">
+                        <div class="dimmed_layout">
+                            <img src="../image/foodwith/thumbnail_avocado.jpg" alt="아보카도의 사진" class="ingredients_image">
+                        </div>
+                        <p class="ingredients_recipe">건강한 아보카도 샌드위치 만들기</p>
+                    </a>
+                </li>
+
+                <li class="ingredients_more">
+                    <input type="button" value=" ">
+                    <div class="ingredients_text">더보기</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="form_wrap">
+            <h2>전하고 싶은 말을 남겨주세요.</h2>
+            <p class="comment">답변을 원하시면 이메일을 꼭 적어주세요.</p>
+            <form>
+                <label for="Nickname" class="inquiry">닉네임</label>
+                <input type="text" placeholder="NICKNAME" class="Nickname" id="Nickname">
+                <label for="ID" class="inquiry">이메일</label>
+                <div class="email">
+                    <input type="text" placeholder="ID" class="ID" id="ID">
+                    <p class="dot">@</p>
+                    <div class="select">
+                        <select>
+                            <option value="none">선택하세요</option>
+                            <option value="naver.com">naver.com</option>
+                            <option value="gmail.com">gmail.com</option>
+                            <option value="daum.net">daum.net</option>
+                            <option value="yahoo.com">yahoo.com</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="textarea_wrap">
+                    <textarea name="textarea" id="textarea" cols="30" rows="10" class="textarea"
+                        placeholder="전하고 싶은 말을 100자 이내로 적어 주세요."></textarea>
+                </div>
+                <input type="submit" value="전송하기" class="submit">
+            </form>
+        </div>
+        <div class="ect_wrap">
+            <div class="notice">
+                <h3>공지사항</h3>
+                <a class="food_notice">다양한 소식을 담은 foodwith! 정식 오픈을 안내드립니다.</a>
+                <a href="#" class="notice_more">더보기</a>
+            </div>
+            <div class="Creators">
+                <h3>Creators</h3>
+                <a href="#" class="notice_link">푸드 크리에이터</a>
+                <a href="#" class="notice_link">푸트 비즈니스</a>
+            </div>
+            <div class="Partners">
+                <h3>Partners</h3>
+                <a href="#" class="notice_link">푸드 파트너</a>
+                <a href="#" class="notice_link">푸드 스토어</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="link_wrap">
+            <a href="#" class="footer_link">회사소개</a>
+            <a href="#" class="footer_link">인재채용</a>
+            <a href="#" class="footer_link">이용약관</a>
+            <a href="#" class="footer_link">고객센터</a>
+        </div>
+        <p class="copyright">&copy; <em>foodwidth</em> All Right Reserved.</p>
+    </footer>
+<script src="../js/Project_C_main.js"></script>
+
+</body>
+</html>

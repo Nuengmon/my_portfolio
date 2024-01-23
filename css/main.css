@@ -1,0 +1,465 @@
+@import url(reset.css);
+
+
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+button {
+    padding: 0px;
+    margin: 0px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    display: flex;
+    position: relative;
+    overflow-x: hidden;
+
+
+    color: #333;
+    background: aqua;
+    /* 브라우저가 그라디언트 지원 ㄴㄴ할때 */
+    background: -webkit-linear-gradient(rgb(247, 196, 206), rgb(201, 212, 253));
+    /* For Safari 5.1 to 6.0  사파리 */
+    background: -o-linear-gradient(rgb(247, 196, 206), rgb(201, 212, 253));
+    /* For Opera 11.1 to 12.0  오페라 */
+    background: -moz-linear-gradient(rgb(247, 196, 206), rgb(201, 212, 253));
+    /* For Firefox 3.6 to 15 파이어폭스 */
+    background: linear-gradient(rgb(247, 196, 206), rgb(201, 212, 253));
+    /* Standard syntax  표준 */
+    background-attachment: fixed;
+
+}
+
+.main_wrapper {
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.h1_wrapper {
+    display: block;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+h1 {
+    width: 100%;
+    background-color: rgb(247, 196, 206);
+}
+
+header {
+    margin-top: 16px;
+    transition: all 0.2s;
+
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.main {
+    position: relative;
+    top: 16px;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    min-height: calc(100vh - 16px);
+    margin-right: 240px;
+    padding: 20px;
+    flex-shrink: 1;
+    flex-grow: 1;
+    transition: 0.2s;
+}
+
+nav {
+    width: 48px;
+    height: 100%;
+    margin: 0px 12px;
+
+}
+
+.nav_list_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    position: fixed;
+
+
+}
+
+.nav_list {
+    padding: 6px 0px;
+}
+
+.nav_list:first-child {
+    border-bottom: 1px solid #555;
+}
+
+.layer_link {
+    display: flex;
+    color: #333;
+    width: 48px;
+    height: 48px;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 24px;
+    border: 1px solid #333;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition-property: width;
+
+    transition: 0.1s;
+}
+
+.layer_link:hover {
+    border-radius: 12px;
+}
+
+.layer_link::after {
+    content: "";
+    position: absolute;
+    right: -13px;
+    width: 6px;
+    height: 24px;
+    border-radius: 0px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+
+.layer_link:hover::after {
+
+    width: 6px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.765);
+    transition-property: width;
+    transition: 0.3s;
+
+}
+
+
+.layer_link:active {
+    transform: translateY(1.5px);
+    transition: all 0s;
+    ;
+}
+
+.layer_link:active::after {
+
+    height: 42px;
+}
+
+.move_point {
+    position: relative;
+    width: 100%;
+    color: #333;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: right;
+    border-bottom: 1px solid #333;
+}
+
+
+
+.layer_link.active {
+    border-radius: 12px;
+}
+
+.active+.Sub_list {
+    width: 240px;
+}
+
+.active::after {
+    content: '';
+    width: 6px;
+    height: 42px;
+    background-color: rgba(255, 255, 255, 0.765);
+    transition-property: width;
+    transition: 0.3s;
+}
+
+.active:hover::after {
+    height: 42px;
+
+}
+
+.Sub_list {
+    position: absolute;
+    min-height: calc(100vh - 16px);
+    top: 0;
+    right: 60px;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 50;
+    border-top-right-radius: 12px;
+    padding: 10px;
+
+
+}
+
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 10px;
+    border-bottom: 1px solid #333;
+    height: calc(80vh - 16px);
+
+
+
+}
+
+.welcome p {
+    margin: 10px;
+    max-height: 10rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+
+.start {
+    font-size: 1rem;
+
+}
+
+.profill {
+    border-radius: 20px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 30px;
+
+}
+
+.comment,
+article {
+    margin: 20px 0px;
+    min-height: 40px;
+}
+
+.comment p,
+.comment article {
+    padding-left: 60px;
+}
+
+
+.flex {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    max-width: 60%;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    /* flex-grow : 1; */
+}
+
+
+.flex p {
+    flex-grow: 1;
+    padding: 0px;
+    margin: 5px;
+
+}
+
+.skill_image,
+.tool_image,
+.contact_image {
+    width: 50px;
+    height: 50px;
+}
+
+.skill_image:nth-of-type(2),
+.tool_image{
+    padding-left: 60px;
+    width: 110px;
+}
+
+
+.move_portfolio {
+    display: block;
+    width: 40%;
+    position: relative;
+}
+
+.thumbnail {
+    position: relative;
+    width: 100%;
+
+}
+
+.hamburger {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    margin: 10px 0px;
+}
+
+.hamburger,
+.hamburger span {
+    display: none;
+    transition: all .4s;
+    box-sizing: border-box;
+}
+
+
+
+.hamburger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+}
+
+.hamburger span:nth-of-type(1) {
+    top: 0;
+}
+
+.hamburger span:nth-of-type(2) {
+    top: 15px;
+    transform: translateY(-50%);
+}
+
+.hamburger span:nth-of-type(3) {
+    bottom: 0;
+}
+
+/* type-01 */
+/* 중앙 라인이 고정된 자리에서 투명하게 사라지며 상하라인 회전하며 엑스자 만들기 */
+.hamburger.active span:nth-of-type(1) {
+    -webkit-transform: translateY(13px) rotate(-45deg);
+    transform: translateY(13px) rotate(-45deg);
+}
+
+.hamburger.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-of-type(3) {
+    -webkit-transform: translateY(-13px) rotate(45deg);
+    transform: translateY(-13px) rotate(45deg);
+}
+
+
+.invisible {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+    padding: 0px;
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+
+
+@media screen and (max-width:850px) {
+
+    .welcome {
+        font-size: 3rem;
+    }
+}
+
+/* @media screen and (max-width:600px) { */
+
+.hamburger,
+.hamburger span {
+    display: inline-block;
+}
+
+header {
+    position: relative;
+    z-index: 10000;
+    height: initial;
+    transition: all 0.2s;
+    width: 0px;
+}
+
+.main {
+    right: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+nav {
+    position: relative;
+    right: 72px;
+}
+
+.nav_list {
+    width: 0px;
+    transition: all 0.2s;
+    opacity: 0;
+}
+
+.hamburger_wrap.active~.nav_list {
+    width: 48px;
+    transition: all 0.2s;
+    opacity: 1;
+
+}
+
+.Sub_list {
+    transition: all 0.2s;
+
+}
+
+.main {
+    transition: all 0.2s;
+    border-top-left-radius: 12px;
+    margin-right: 0px;
+
+}
+
+.main.active {
+    transform: translateX(-311px);
+}
+
+
+/* } */
