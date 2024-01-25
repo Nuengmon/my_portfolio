@@ -33,7 +33,7 @@ header {
     position: fixed;
     bottom: 180px;
     right: 0;
-    background-image: url(/image/foodwith_IR/go_top.gif);
+    background-image: url(../image/foodwith_IR/go_top.gif);
     width: 100px;
     height: 100px;
     border: 0;
@@ -49,7 +49,7 @@ header a {
 }
 
 .section_invite {
-    background-image: url(/image/foodwith_IR/section_invite.jpg);
+    background-image: url(../image/foodwith_IR/section_invite.jpg);
     min-width: 980px;
     height: 750px;
     background-repeat: no-repeat;
@@ -57,7 +57,7 @@ header a {
 }
 
 .section_creator {
-    background-image: url(/image/foodwith_IR/section_creator.jpg);
+    background-image: url(../image/foodwith_IR/section_creator.jpg);
     background-color: #f9939d;
     min-width: 980px;
     height: 822px;
@@ -66,7 +66,7 @@ header a {
 }
 
 .section_store {
-    background-image: url(/image/foodwith_IR/section_store.jpg);
+    background-image: url(../image/foodwith_IR/section_store.jpg);
     background-color: #d5e48f;
     min-width: 980px;
     height: 1084px;
@@ -98,41 +98,41 @@ header a {
 }
 
 .apple {
-    background-image: url(/image/foodwith_IR/thumbnail_apple.jpg);
+    background-image: url(../image/foodwith_IR/thumbnail_apple.jpg);
 }
 
 .onion {
-    background-image: url(/image/foodwith_IR/thumbnail_onion.jpg);
+    background-image: url(../image/foodwith_IR/thumbnail_onion.jpg);
 
 }
 
 .banana {
-    background-image: url(/image/foodwith_IR/thumbnail_banana.jpg);
+    background-image: url(../image/foodwith_IR/thumbnail_banana.jpg);
 
 }
 
 .kiwi {
-    background-image: url(/image/foodwith_IR/thumbnail_kiwi.jpg);
+    background-image: url(../image/foodwith_IR/thumbnail_kiwi.jpg);
 
 }
 
 .broccoli {
-    background-image: url(/image/foodwith_IR/thumbnail_broccoli.jpg);
+    background-image: url(../image/foodwith_IR/thumbnail_broccoli.jpg);
 
 }
 
 .lemon {
-    background-image: url(/image/foodwith_IR/thumbnail_lemon.jpg);
+    background-image: url(../image/foodwith_IR/thumbnail_lemon.jpg);
 
 }
 
 .gralic {
-    background-image: url(/image/foodwith_IR/thumbnail_garlic.jpg);
+    background-image: url(../image/foodwith_IR/thumbnail_garlic.jpg);
 
 }
 
 .tomato {
-    background-image: url(/image/foodwith_IR/thumbnail_tomato.jpg);
+    background-image: url(../image/foodwith_IR/thumbnail_tomato.jpg);
 
 }
 
@@ -211,7 +211,7 @@ header a {
     min-width: 980px;
     height: 1030px;
 
-    background-image: url(/image/foodwith_IR/pattern_recipe.png);
+    background-image: url(../image/foodwith_IR/pattern_recipe.png);
     background-repeat: repeat-x;
     background-position: center;
     background-color: #b893f9;
@@ -220,7 +220,7 @@ header a {
 
 
 .section_recipe {
-    background-image: url(/image/foodwith_IR/section_recipe.png);
+    background-image: url(../image/foodwith_IR/section_recipe.png);
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
@@ -252,7 +252,7 @@ header a {
 .more_recipe {
     display: inline-block;
     position: absolute;
-    background-image: url(/image/foodwith_IR/go_recipe.gif);
+    background-image: url(../image/foodwith_IR/go_recipe.gif);
     width: 310px;
     height: 91px;
     left: 50%;
@@ -263,7 +263,7 @@ header a {
 
 .more_recipe:hover,
 .more_recipe:active {
-    background-image: url(/image/foodwith_IR/go_recipe_over.gif);
+    background-image: url(../image/foodwith_IR/go_recipe_over.gif);
 }
 
 
@@ -310,7 +310,7 @@ header a {
 }
 
 .Question:before {
-    background-image: url(/image/foodwith_IR/icon_question.gif);
+    background-image: url(../image/foodwith_IR/icon_question.gif);
     content: '';
     display: inline-block;
     width: 21px;
@@ -329,7 +329,7 @@ header a {
 }
 
 .Question::after {
-    background-image: url(/image/foodwith_IR/icon_arrow_down.gif);
+    background-image: url(../image/foodwith_IR/icon_arrow_down.gif);
 
 
     content: '';
@@ -364,7 +364,7 @@ header a {
 }
 
 .active+.Answer::before {
-    background-image: url(/image/foodwith_IR/icon_answer.gif);
+    background-image: url(../image/foodwith_IR/icon_answer.gif);
     content: '';
     display: inline-block;
     width: 21px;
