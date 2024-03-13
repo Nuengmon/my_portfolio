@@ -15,8 +15,6 @@ let lastPage = content.length - 1;
 
 let short = document.getElementsByClassName('short').length;
 
-history.scrollRestoration = "manual"
-
 
 // nav를 누르면 하위 레이아웃을 활성화 시켜주는 함수
 function Switch_toggle(ID) {
@@ -117,20 +115,24 @@ Hamburger.addEventListener('click', function () {
 
 
 
+history.scrollRestoration = "manual"
 
 
-window.onload=function deviceCheck() {
-    
+window.onload = function deviceCheck() {
+
     const user = navigator.userAgent;
-    
-    if ( user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1 ) {
-    	console.log("mobile버젼");
-        console.log(user);    
-    }else{
+
+    if (user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1) {
+        console.log("mobile버젼");
+        console.log(user);
+        document.getElementsByTagName("body")[0].style.overflow ="scroll";
+    } else {
+        console.log("pc버젼");
+        console.log(user);
         window.addEventListener('wheel', (e) => {
             e.preventDefault();
             console.log(e.deltaY)
-        
+
             if (e.deltaY > 0) {
                 page++;
             } else if (e.deltaY < 0) {
@@ -141,32 +143,32 @@ window.onload=function deviceCheck() {
             } else if (page > lastPage) {
                 page = lastPage;
             }
-        
+
             if (page < lastPage - 1) {
                 wrap.style.top = page * -100 + 'vh';
             }
             else {
                 // wrap.style.top = (lastPage - short) * -100 + (page - short) * - 20 + 'vh';
                 wrap.style.top = (lastPage - short) * - 100 + - 30 + 'vh';
-        
+
             }
-        
-        
+
+
             console.log(page);
         }, { passive: false }); // 디폴트 기능 제거 - 스크롤
-        
-        
+
+
         for (let i = 0; i < move_point_list.length; i++) {
             move_point_list[i].addEventListener('click', function () {
                 page = i;
-        
+
                 if (page < lastPage - 1) {
                     wrap.style.top = page * -100 + 'vh';
                 }
                 else {
                     // wrap.style.top = (lastPage - short) * -100 + (page - short) * - 20 + 'vh';
                     wrap.style.top = (lastPage - short) * - 100 + - 30 + 'vh';
-            
+
                 }
                 // wrap.style.top = page * -100 + 'vh';
                 // console.log(page);
