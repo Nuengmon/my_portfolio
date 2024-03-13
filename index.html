@@ -9,10 +9,7 @@
 </head>
 
 <body>
-    <div class="h1_wrapper">
-        <h1>정진영의 포트폴리오</h1>
-    </div>
-    <div class="main_wrapper">
+    <div class="nav_wrapper">
         <header>
             <nav>
                 <ul class="nav_list_wrapper">
@@ -25,27 +22,27 @@
                     </li>
                     <li class="nav_list">
                         <button type="button" class="layer_link active" id="Home_link">Home</button>
-                        <ul class="Sub_list ">
-                            <li><a href="#Home" class="move_point">#Home</a></li>
+                        <ul class="Sub_list invisible">
+                            <li><button type="button" class="move_point">#Home</button></li>
                         </ul>
                     </li>
                     <li class="nav_list">
                         <button type="button" class="layer_link" id="Skill_link">Skill</button>
                         <ul class="Sub_list invisible">
-                            <li><a href="#Skill" class="move_point invisible">#Skill</a></li>
+                            <li><button type="button" class="move_point invisible">#Skill</button></li>
                         </ul>
                     </li>
                     <li class="nav_list">
                         <button type="button" class="layer_link" id="Project_link">Project</button>
                         <ul class="Sub_list invisible">
-                            <li><a href="#food_with_IR" class="move_point invisible">#Project A</a></li>
-                            <li><a href="#food_with" class="move_point invisible">#Project B</a></li>
+                            <li><button type="button" class="move_point invisible">#Project A</button></li>
+                            <!-- <li><button type="button" class="move_point invisible">#Project B</button></li> -->
                         </ul>
                     </li>
                     <li class="nav_list">
                         <button type="button" class="layer_link" id="Contact_link">Contact</button>
                         <ul class="Sub_list invisible">
-                            <li><a href="#Contact" class="move_point invisible">#CALL ME</a></li>
+                            <li><button type="button" class="move_point invisible">#CALL ME</button></li>
                             <li></li>
                             <li></li>
                         </ul>
@@ -53,73 +50,105 @@
                 </ul>
             </nav>
         </header>
-        <main class="main">
-            <div class="welcome">
-                <p>정진영의 포트폴리오에</p>
-                <p>오신 것을 환영합니다.</p>
-                <p class="start">이 포트폴리오가 시작된 곳이에요.</p>
-            </div>
-            <div class="comment" id="Home">
-                <img src="./image/min.png" alt="정진영의 사진" class="profill">
-                <p>정진영 날짜</p>
-                <p>안녕하세요 ! 신입 웹 퍼블리셔 정진영입니다.</p>
-            </div>
-            <div class="comment" id="Skill">
-                <img src="./image/min.png" alt="정진영의 사진" class="profill">
-                <p>정진영 날짜</p>
-                <p>저는 이런 것을 할 줄 압니다.</p>
-                <img src="./image/html.png" alt="HTML5 이미지" class="skill_image">
-                <img src="./image/css.png" alt="CSS3 이미지" class="skill_image">
-                <img src="./image/js.png" alt="javascript 이미지" class="skill_image">
-
-                <p>저는 이런 도구를 사용합니다.</p>
-                <img src="./image/vsc.png" alt="visual studio code image" class="tool_image">
-
-            </div>
-            <div class="comment" id="Project">
-                <img src="./image/min.png" alt="정진영의 사진" class="profill">
-                <p>정진영 날짜</p>
-
-                <p>제가 작업한 작업물 입니다.</p>
-
-                <article id="food_with_IR">
-                    <a href="./html/Project_B.html" target="_blank" class="move_portfolio">
-                        <img src="image/food_with_IR_thumnail.png" alt="food with food thumbnail image"
-                            class="thumbnail">
-                    </a>
-                    <div class="flex">
-                        <h2>food with 초대 홈페이지</h2>
-                        <p>사용 프로그램 : HTML, CSS, Javascript</p>
-                        <p></p>
-                    </div>
-                </article>
-                <article id="food_with">
-                    <a href="./html/Project_C_main.html" target="_blank" class="move_portfolio">
-                        <img src="./image/food_with_thumnail.png" alt="food with homepage thumbnail image"
-                            class="thumbnail">
-                    </a>
-                    <div class="flex">
-                        <h2>food with 홈페이지</h2>
-                        <p>사용 프로그램 : HTML, CSS, Javascript</p>
-                        <p></p>
-
-                    </div>
-                </article>
-            </div>
-            <div class="comment" id="Contact">
-                <img src="./image/min.png" alt="" class="profill">
-                <p>정진영 </p>
-                <p>아래로 연락해주시면 감사하겠습니다.</p>
-
-                <p><a href='tel:010-3133-3593'><img src="./image/phone.png" alt="전화 이미지"
-                            class="contact_image">010-3133-3593</a></p>
-                <p><a href="mailto:0523nada@gmail.com"><img src="./image/email.png" alt="이메일 이미지"
-                            class="contact_image">0523nada@gmail.com</a></p>
-            </div>
-        </main>
     </div>
+    <main class="main">
+        <div class="content" id="Home">
+            <div class="welcome">
+                <h1>정진영의 포트폴리오에 오신 것을 환영합니다.</h1>
+            </div>
+
+        </div>
+        <div class="content" id="Skill">
+            <h2>저를 소개합니다.</h2>
+            <div class="info_wrap">
+                <img src="./image/min.png" alt="사진" class="profile">
+                <div class="introduce_wrap">
+                    <div class="introduce">
+                        <img src="./image/name_1.png" alt="사람 이미지" class="icon">
+                        <p class="introduce">Name</p>
+                        <p class="introduce">정진영</p>
+                    </div>
+                    <div class="introduce">
+                        <img src="./image/address_1.png" alt="좌표 이미지" class="icon">
+                        <p class="introduce">Address</p>
+                        <p class="introduce">경기도 광명시 광명동</p>
+                    </div>
+                    <div class="introduce">
+                        <img src="./image/email.png" alt="이메일 이미지" class="icon">
+                        <p class="introduce">E-Mail</p>
+                        <!-- <p class="introduce">0523nada@gmail.com</p> -->
+                    </div>
+                    <div class="introduce">
+                        <img src="./image/phone.png" alt="전화 이미지" class="icon">
+                        <p class="introduce">Phone</p>
+                        <p class="introduce">+82 010-3133-3593</p>
+                    </div>
+                    <div class="introduce">
+                        <img src="./image/skill.png" alt="사람 이미지" class="icon">
+                        <p class="introduce">skills</p>
+                        <div class="skill_wrap">
+                            <div class="skill_image_wrap">
+                                <img src="./image/html.png" alt="HTML5 이미지" class="skill_image">
+                            </div>
+                            <div class="skill_image_wrap">
+                                <img src="./image/css.png" alt="CSS3 이미지" class="skill_image">
+                            </div>
+                            <div class="skill_image_wrap">
+                                <img src="./image/js.png" alt="javascript 이미지" class="skill_image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="introduce">
+                        <img src="./image/tool.png" alt="도구 이미지" class="icon">
+                        <p class="introduce">tool</p>
+                        <div class="tool_image_wrap">
+                            <img src="./image/vsc.png" alt="visual studio code image" class="tool_image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content" id="Project">
+
+            <article id="food_with_IR">
+                <a href="./html/Project_B.html" target="_blank" class="move_portfolio">
+                    <img src="image/food_with_IR_thumnail.png" alt="food with food thumbnail image" class="thumbnail">
+                </a>
+                <div class="flex">
+                    <h3>food with 초대 홈페이지</h3>
+                    <p>사용 프로그램 : HTML, CSS, Javascript</p>
+                    <p></p>
+                </div>
+            </article>
+            <article id="food_with">
+                <a href="./html/Project_C_main.html" target="_blank" class="move_portfolio">
+                    <img src="./image/food_with_thumnail.png" alt="food with homepage thumbnail image"
+                        class="thumbnail">
+                </a>
+                <div class="flex">
+                    <h3>food with 홈페이지</h3>
+                    <p>사용 프로그램 : HTML, CSS, Javascript</p>
+                    <p></p>
+
+                </div>
+            </article>
+        </div>
+        <div class="content short" id="Contact">
+            <p>아래로 연락 주시면 감사하겠습니다.</p>
+            <p><a href='tel:010-3133-3593'><img src="./image/phone.png" alt="전화 이미지" class="icon"
+                        class="contact_image">010-3133-3593</a></p>
+            <p><a href="mailto:0523nada@gmail.com"><img src="./image/email.png" alt="이메일 이미지" class="icon"
+                        class="contact_image">0523nada@gmail.com</a></p>
+        </div>
+
+        <footer class="content short">&copy; 2023. 정진영. All rights reserved.
+
+            본 사이트는 Chrome, Edge에 최적화되어 있습니다.
+        </footer>
+    </main>
+
     <script src="./js/index.js"></script>
-    <!-- <footer>&copy; 2023. 정진영. All rights reserved.</footer> -->
+
 </body>
 
 </html>
