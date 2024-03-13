@@ -116,48 +116,61 @@ Hamburger.addEventListener('click', function () {
 
 
 
-window.addEventListener('wheel', (e) => {
-    e.preventDefault();
-    console.log(e.deltaY)
-
-    if (e.deltaY > 0) {
-        page++;
-    } else if (e.deltaY < 0) {
-        page--;
-    }
-    if (page < 0) {
-        page = 0;
-    } else if (page > lastPage) {
-        page = lastPage;
-    }
-
-    if (page < lastPage - 1) {
-        wrap.style.top = page * -100 + 'vh';
-    }
-    else {
-        // wrap.style.top = (lastPage - short) * -100 + (page - short) * - 20 + 'vh';
-        wrap.style.top = (lastPage - short) * - 100 + - 30 + 'vh';
-
-    }
 
 
-    console.log(page);
-}, { passive: false }); // 디폴트 기능 제거 - 스크롤
 
-
-for (let i = 0; i < move_point_list.length; i++) {
-    move_point_list[i].addEventListener('click', function () {
-        page = i;
-
-        if (page < lastPage - 1) {
-            wrap.style.top = page * -100 + 'vh';
-        }
-        else {
-            // wrap.style.top = (lastPage - short) * -100 + (page - short) * - 20 + 'vh';
-            wrap.style.top = (lastPage - short) * - 100 + - 30 + 'vh';
+window.onload=function deviceCheck() {
     
+    const user = navigator.userAgent;
+    
+    if ( user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1 ) {
+    	console.log("mobile버젼");
+        console.log(user);    
+    }else{
+        window.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            console.log(e.deltaY)
+        
+            if (e.deltaY > 0) {
+                page++;
+            } else if (e.deltaY < 0) {
+                page--;
+            }
+            if (page < 0) {
+                page = 0;
+            } else if (page > lastPage) {
+                page = lastPage;
+            }
+        
+            if (page < lastPage - 1) {
+                wrap.style.top = page * -100 + 'vh';
+            }
+            else {
+                // wrap.style.top = (lastPage - short) * -100 + (page - short) * - 20 + 'vh';
+                wrap.style.top = (lastPage - short) * - 100 + - 30 + 'vh';
+        
+            }
+        
+        
+            console.log(page);
+        }, { passive: false }); // 디폴트 기능 제거 - 스크롤
+        
+        
+        for (let i = 0; i < move_point_list.length; i++) {
+            move_point_list[i].addEventListener('click', function () {
+                page = i;
+        
+                if (page < lastPage - 1) {
+                    wrap.style.top = page * -100 + 'vh';
+                }
+                else {
+                    // wrap.style.top = (lastPage - short) * -100 + (page - short) * - 20 + 'vh';
+                    wrap.style.top = (lastPage - short) * - 100 + - 30 + 'vh';
+            
+                }
+                // wrap.style.top = page * -100 + 'vh';
+                // console.log(page);
+            });
         }
-        // wrap.style.top = page * -100 + 'vh';
-        // console.log(page);
-    });
+    }
 }
