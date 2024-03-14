@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./image/title_icon.png">
     <title>정진영의 포트폴리오</title>
 </head>
 
@@ -54,14 +55,17 @@
     <main class="main">
         <div class="content" id="Home">
             <div class="welcome">
-                <h1>정진영의 포트폴리오입니다.</h1>
+                <h1>안녕하세요! 정진영입니다.
+                </h1>
             </div>
 
         </div>
         <div class="content" id="Skill">
             <h2>저를 소개합니다.</h2>
             <div class="info_wrap">
-                <img src="./image/min.png" alt="사진" class="profile">
+                <div class="profile_image_wrap">
+                    <img src="./image/min.png" alt="사진" class="profile">
+                </div>
                 <div class="introduce_wrap">
                     <div class="introduce">
                         <img src="./image/name_1.png" alt="사람 이미지" class="icon">
@@ -83,22 +87,22 @@
                         <p class="introduce">Phone</p>
                         <p class="introduce">+82 010-3133-3593</p>
                     </div>
-                    <div class="introduce">
+                    <div class="introduce skill">
                         <img src="./image/skill.png" alt="사람 이미지" class="icon">
                         <p class="introduce">skills</p>
                         <div class="skill_wrap">
                             <div class="skill_image_wrap">
-                                <img src="./image/html.png" alt="HTML5 이미지" class="skill_image">
+                                <img src="./image/html.png" alt="HTML5" class="skill_image">
                             </div>
                             <div class="skill_image_wrap">
-                                <img src="./image/css.png" alt="CSS3 이미지" class="skill_image">
+                                <img src="./image/css.png" alt="CSS3" class="skill_image">
                             </div>
                             <div class="skill_image_wrap">
-                                <img src="./image/js.png" alt="javascript 이미지" class="skill_image">
+                                <img src="./image/js.png" alt="javascript" class="skill_image">
                             </div>
                         </div>
                     </div>
-                    <div class="introduce">
+                    <div class="introduce tool">
                         <img src="./image/tool.png" alt="도구 이미지" class="icon">
                         <p class="introduce">tool</p>
                         <div class="tool_image_wrap">
@@ -116,8 +120,19 @@
                 </a>
                 <div class="flex">
                     <h3>food with 초대 홈페이지</h3>
-                    <p>사용 프로그램 : HTML, CSS, Javascript</p>
-                    <p></p>
+                    <div class="skill_wrap">
+                        <p>사용 프로그램 : </p>
+
+                        <div class="skill_image_wrap">
+                            <img src="./image/html.png" alt="HTML5" class="skill_image">
+                        </div>
+                        <div class="skill_image_wrap">
+                            <img src="./image/css.png" alt="CSS3" class="skill_image">
+                        </div>
+                        <div class="skill_image_wrap">
+                            <img src="./image/js.png" alt="javascript" class="skill_image">
+                        </div>
+                    </div>
                 </div>
             </article>
             <article id="food_with">
@@ -127,18 +142,35 @@
                 </a>
                 <div class="flex">
                     <h3>food with 홈페이지</h3>
-                    <p>사용 프로그램 : HTML, CSS, Javascript</p>
-                    <p></p>
+
+                    <div class="skill_wrap">
+                        <p>사용 프로그램 : </p>
+                        <div class="skill_image_wrap">
+                            <img src="./image/html.png" alt="HTML5" class="skill_image">
+                        </div>
+                        <div class="skill_image_wrap">
+                            <img src="./image/css.png" alt="CSS3" class="skill_image">
+                        </div>
+                        <div class="skill_image_wrap">
+                            <img src="./image/js.png" alt="javascript" class="skill_image">
+                        </div>
+                    </div>
 
                 </div>
             </article>
         </div>
         <div class="content short" id="Contact">
-            <p>아래로 연락 주시면 감사하겠습니다.</p>
-            <p><a href='tel:010-3133-3593'><img src="./image/phone.png" alt="전화 이미지" class="icon"
-                        class="contact_image">010-3133-3593</a></p>
-            <p><a href="mailto:0523nada@gmail.com"><img src="./image/email.png" alt="이메일 이미지" class="icon"
-                        class="contact_image">0523nada@gmail.com</a></p>
+            <h2>아래로 연락 주시면 감사하겠습니다.</h2>
+            <div class="contact_wrap">
+                <a href='tel:010-3133-3593' class="introduce">
+                    <img src="./image/phone.png" alt="전화 이미지" class="icon" class="contact_image">
+                    <p>010-3133-3593</p>
+                </a>
+                <a href="mailto:0523nada@gmail.com" class="introduce">
+                    <img src="./image/email.png" alt="이메일 이미지" class="icon" class="contact_image">
+                    <p>0523nada@gmail.com</p>
+                </a>
+            </div>
         </div>
 
         <footer class="content short">

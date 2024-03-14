@@ -11,9 +11,11 @@ let move_point_list = document.querySelectorAll('.move_point');
 let wrap = document.getElementsByClassName('main')[0]; // 보일 영역
 let content = document.getElementsByClassName('content');
 let page = 0; // 영역 포지션 초기값
-let lastPage = content.length - 1;
+let lastPage = content.length - 2;
 
-let short = document.getElementsByClassName('short').length;
+let short = document.getElementsByClassName('short').length - 1;
+
+let Skill_image = document.getElementsByClassName('skill_image');
 
 
 // nav를 누르면 하위 레이아웃을 활성화 시켜주는 함수
@@ -111,12 +113,12 @@ Hamburger.addEventListener('click', function () {
 });
 
 
-
-
-
+for (let i = 0; i < Skill_image.length; i++) {
+    Skill_image[i].style.comment = Skill_image[i].alt
+    window.getComputedStyle(Skill_image[i], '::after').content;
+}
 
 history.scrollRestoration = "manual"
-
 
 window.onload = function deviceCheck() {
 
@@ -125,7 +127,7 @@ window.onload = function deviceCheck() {
     if (user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1) {
         console.log("mobile버젼");
         console.log(user);
-        document.getElementsByTagName("body")[0].style.overflow ="scroll";
+        document.getElementsByTagName("body")[0].style.overflow = "scroll";
     } else {
         console.log("pc버젼");
         console.log(user);
@@ -144,16 +146,14 @@ window.onload = function deviceCheck() {
                 page = lastPage;
             }
 
-            if (page < lastPage - 1) {
-                wrap.style.top = page * -100 + 'vh';
+            if (page < lastPage) {
+                wrap.style.top = page * -100 + '%';
             }
             else {
-                // wrap.style.top = (lastPage - short) * -100 + (page - short) * - 20 + 'vh';
-                wrap.style.top = (lastPage - short) * - 100 + - 30 + 'vh';
-
+                wrap.style.setProperty('top', 'calc(-200vh - 300px)');
             }
-
-
+            // wrap.style.top('width', 'calc(100% + 224px)');
+            console.log(lastPage);
             console.log(page);
         }, { passive: false }); // 디폴트 기능 제거 - 스크롤
 
@@ -162,13 +162,11 @@ window.onload = function deviceCheck() {
             move_point_list[i].addEventListener('click', function () {
                 page = i;
 
-                if (page < lastPage - 1) {
+                if (page < lastPage-1) {
                     wrap.style.top = page * -100 + 'vh';
                 }
                 else {
-                    // wrap.style.top = (lastPage - short) * -100 + (page - short) * - 20 + 'vh';
-                    wrap.style.top = (lastPage - short) * - 100 + - 30 + 'vh';
-
+                    wrap.style.setProperty('top', 'calc(-200vh - 300px)');
                 }
                 // wrap.style.top = page * -100 + 'vh';
                 // console.log(page);
