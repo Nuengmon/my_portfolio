@@ -1,7 +1,8 @@
 @import url(reset.css);
 
 :root {
-    --font-color: 238, 238, 238;
+    --system-color: 238, 238, 238;
+    --contents-color: 0, 152, 113;
     --bgc: 33, 33, 33;
     --alpha: 0.8;
     --border-dark: 0, 152, 113;
@@ -12,6 +13,7 @@
 a {
     text-decoration: none;
     display: block;
+    color: rgb(var(--border-dark));
 }
 
 button {
@@ -29,6 +31,7 @@ html {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -41,11 +44,11 @@ body {
     height: 100%;
     display: flex;
     position: relative;
-    overflow:hidden;
+    overflow: hidden;
     flex-direction: column;
 
 
-    color: rgb(var(--font-color));
+    color: rgb(var(--contents-color));
     background: gray;
     /* 브라우저가 그라디언트 지원하지 않을 때 */
     background: -webkit-linear-gradient(#111111, #333333);
@@ -87,9 +90,9 @@ header {
     flex-grow: 0;
     position: relative;
     z-index: 10000;
-    height: initial;
+    /* height: initial; */
     transition: all 0.2s;
-    width: 0px;
+    /* width: 0px; */
 }
 
 
@@ -114,7 +117,7 @@ header {
 
 nav {
     position: relative;
-    right: 72px;
+    /* right: 72px; */
     width: 48px;
     height: 100%;
     margin: 0px 12px;
@@ -154,7 +157,7 @@ nav {
 
 .layer_link {
     display: flex;
-    color: rgb(var(--font-color));
+    color: rgb(var(--system-color));
     width: 48px;
     height: 48px;
 
@@ -190,7 +193,7 @@ nav {
 
     width: 6px;
     height: 20px;
-    background-color: rgba(var(--font-color), 0.765);
+    background-color: rgba(var(--system-color), 0.765);
     transition-property: width;
     transition: 0.3s;
 
@@ -211,7 +214,7 @@ nav {
 .move_point {
     position: relative;
     width: 100%;
-    color: rgb(var(--font-color));
+    color: rgb(var(--system-color));
     display: block;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -234,7 +237,7 @@ nav {
     content: '';
     width: 6px;
     height: 42px;
-    background-color: rgba(var(--font-color), var(--alpha));
+    background-color: rgba(var(--system-color), var(--alpha));
     transition-property: width;
     transition: 0.3s;
 }
@@ -320,7 +323,7 @@ nav {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.content:last-of-type {
+div.content:last-of-type {
     height: 20vh;
 }
 
@@ -382,7 +385,7 @@ h3 {
     width: 100%;
     display: flex;
     flex-direction: column;
-    color: rgb(var(--border-light));
+    color: rgb(var(--contents-color));
     font-size: 1.5rem;
     justify-content: space-around;
 
@@ -563,8 +566,18 @@ article {
     width: 100%;
 }
 
-footer {
-    height: 20vh;
+footer.content {
+    color: rgb(var(--system-color));
+    text-align: center;
+    position: relative;
+    height : 10vh;
+}
+
+footer p {
+    height : 1rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 
@@ -596,11 +609,12 @@ footer {
     }
 
     .introduce {
-        height : 50px;
+        height: 50px;
     }
+
     .icon {
-        padding : 5px;
-        width : 50px;
-        height : 50px;
+        padding: 5px;
+        width: 50px;
+        height: 50px;
     }
 }
