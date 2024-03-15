@@ -10,8 +10,8 @@
     --border-dark: 0, 152, 113;
     --border-light: 31, 183, 144;
     --message: '';
+    scroll-behavior: smooth;
 }
-
 
 a {
     text-decoration: none;
@@ -33,6 +33,7 @@ html {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    scroll-behavior: smooth !important;
 }
 
 *,
@@ -402,15 +403,13 @@ h3 {
     text-align: left;
     /* height: 70px; */
     position: relative;
+    align-items: center;
 }
 
 .introduce .introduce {
     height: 1.5rem;
     display: block;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-
 }
 
 .introduce .introduce:first-of-type {
@@ -439,8 +438,6 @@ h3 {
 .skill_image_wrap,
 .tool_image_wrap {
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
     width: 50px;
     height: 50px
 }
@@ -615,7 +612,6 @@ div.content:last-of-type {
     display : flex;
     flex-direction: row;
     justify-content: space-around;
-    line-height: 70px;
 }
 
 footer.content {
@@ -670,6 +666,7 @@ footer p {
         width: 50px;
         height: 50px;
     }
+    
 
 
 }

@@ -17,7 +17,6 @@ let short = document.getElementsByClassName('short').length - 1;
 
 let Skill_image = document.getElementsByClassName('skill_image');
 
-
 // nav를 누르면 하위 레이아웃을 활성화 시켜주는 함수
 function Switch_toggle(ID) {
     ID.classList.add('active');
@@ -127,7 +126,23 @@ window.onload = function deviceCheck() {
     if (user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1) {
         console.log("mobile버젼");
         console.log(user);
-        document.getElementsByTagName("body")[0].style.overflow = "scroll";
+        document.getElementsByTagName("body")[0].style.overflow = "scroll"; // 스크롤 제한 해제
+
+
+        for (let i = 0; i < move_point_list.length; i++) { // 버튼에 따라 스크롤 위치 이동
+            move_point_list[i].addEventListener('click', function () {
+                page = i;
+                console.log(content[i].offsetTop);
+                if (page < lastPage - 1) {
+                    window.scrollTo({top: content[i].offsetTop, behavior: 'smooth'});
+                }
+                else {
+                    window.scrollTo({top: content[i].offsetTop, behavior: 'smooth'});
+                }
+            });
+        }
+
+
     } else {
         console.log("pc버젼");
         console.log(user);
@@ -162,7 +177,7 @@ window.onload = function deviceCheck() {
             move_point_list[i].addEventListener('click', function () {
                 page = i;
 
-                if (page < lastPage-1) {
+                if (page < lastPage) {
                     wrap.style.top = page * -100 + 'vh';
                 }
                 else {
@@ -173,4 +188,5 @@ window.onload = function deviceCheck() {
             });
         }
     }
+
 }
