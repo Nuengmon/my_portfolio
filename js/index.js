@@ -15,7 +15,6 @@ let lastPage = content.length - 2;
 
 let short = document.getElementsByClassName('short').length - 1;
 
-let Skill_image = document.getElementsByClassName('skill_image');
 
 // nav를 누르면 하위 레이아웃을 활성화 시켜주는 함수
 function Switch_toggle(ID) {
@@ -112,11 +111,6 @@ Hamburger.addEventListener('click', function () {
 });
 
 
-for (let i = 0; i < Skill_image.length; i++) {
-    Skill_image[i].style.comment = Skill_image[i].alt
-    window.getComputedStyle(Skill_image[i], '::after').content;
-}
-
 history.scrollRestoration = "manual"
 
 window.onload = function deviceCheck() {
@@ -134,10 +128,10 @@ window.onload = function deviceCheck() {
                 page = i;
                 console.log(content[i].offsetTop);
                 if (page < lastPage - 1) {
-                    window.scrollTo({top: content[i].offsetTop, behavior: 'smooth'});
+                    window.scrollTo({ top: content[i].offsetTop, behavior: 'smooth' });
                 }
                 else {
-                    window.scrollTo({top: content[i].offsetTop, behavior: 'smooth'});
+                    window.scrollTo({ top: content[i].offsetTop, behavior: 'smooth' });
                 }
             });
         }

@@ -101,7 +101,6 @@ header {
     top: 0;
     /* background-color: rgba(var(--bgc), 0.8); */
     min-height: 100vh;
-    /* padding: 20px; */
     flex-shrink: 1;
     flex-grow: 1;
     transition-property: all;
@@ -330,7 +329,7 @@ article {
     display: flex;
     padding: 20px 0px;
     width: 100%;
-    height: 50vh;
+    height: 45vh;
     flex-direction: row;
     position: relative;
 }
@@ -340,15 +339,26 @@ article {
     flex-grow: 1;
     flex-direction: column;
     width: 60%;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
+    padding: 20px;
+}
+
+.skill_wrap p {
+    line-height: 50px;
+    font-size: 1.5rem;
+}
+
+.flex .skill_wrap {
+    margin-top: 30px;
 }
 
 h2 {
-    padding: 20px 0px;
+    padding: 15px 0px;
     font-size: 3rem;
     text-align: center;
-    color : rgb(var(--system-color));
+    color: rgb(var(--system-color));
+    word-break: keep-all;
 }
 
 h3 {
@@ -359,12 +369,6 @@ h3 {
 }
 
 
-.flex p {
-    flex-grow: 1;
-    padding: 0px;
-    margin: 5px;
-
-}
 
 .info_wrap {
     display: flex;
@@ -395,15 +399,14 @@ h3 {
     color: rgb(var(--contents-color));
     font-size: 1.5rem;
     justify-content: space-around;
-
 }
 
 .introduce {
     display: flex;
     text-align: left;
-    /* height: 70px; */
     position: relative;
     align-items: center;
+    font-size: 1.5rem
 }
 
 .introduce .introduce {
@@ -425,15 +428,18 @@ h3 {
     height: 100%;
 }
 
-.introduce.skill {
+.introduce.skill,
+.introduce.tool {
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: calc(1.5rem + 10px);
 }
 
 .skill_wrap {
     position: relative;
     display: flex;
 }
+
 
 .skill_image_wrap,
 .tool_image_wrap {
@@ -444,9 +450,8 @@ h3 {
 
 .skill_image_wrap::after,
 .tool_image_wrap::after {
-    content: var(--message);
+    content: '';
     display: block;
-
     background-color: rgba(255, 255, 255, 0.1);
     position: absolute;
     bottom: -110px;
@@ -465,6 +470,27 @@ h3 {
     padding: 0px;
 }
 
+.skill_image_wrap:nth-of-type(1)::after {
+    content: 'HTML5';
+
+}
+
+.skill_image_wrap:nth-of-type(2)::after {
+    content: 'CSS3';
+
+}
+
+.skill_image_wrap:nth-of-type(3)::after {
+    content: 'JavaScript';
+
+}
+
+.tool_image_wrap:first-of-type::after {
+    content: 'VSCode';
+
+}
+
+
 .skill_image_wrap:hover::after,
 .skill_image_wrap:hover::before,
 .tool_image_wrap:hover::after,
@@ -480,7 +506,9 @@ h3 {
 .tool_image_wrap:hover::after {
     width: 100px;
     height: 1.5rem;
-    bottom: -35px;
+    bottom: calc(-10px - 1.5rem);
+    line-height: 1.5rem;
+    font-size : 1rem;
 }
 
 .skill_image_wrap::before,
@@ -515,18 +543,21 @@ h3 {
 }
 
 .move_portfolio {
-    display: block;
+    display: flex;
     width: 40%;
     min-height: 30%;
     position: relative;
+    padding: 20px;
+    align-items: center;
 }
 
 .thumbnail {
     position: relative;
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
-    padding: 20px;
+    /* margin: 20px; */
+    border-radius: 10px;
 }
 
 .hamburger {
@@ -598,7 +629,7 @@ h3 {
 
 div.content:last-of-type {
     height: 200px;
-    display : flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
@@ -609,7 +640,7 @@ div.content:last-of-type {
 } */
 
 .contact_wrap {
-    display : flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
@@ -619,6 +650,8 @@ footer.content {
     text-align: center;
     position: relative;
     height: 100px;
+    word-break: keep-all;
+
 }
 
 footer p {
@@ -653,12 +686,19 @@ footer p {
     }
 
     .introduce_wrap {
-        max-height: 70vh;
+        height: 70vh;
+        justify-content: space-around;
     }
 
     .introduce {
         height: 50px;
-        font-size: 1.5rem;
+        font-size: 1rem;
+    }
+
+
+    .flex {
+        width: 100%;
+
     }
 
     .icon {
@@ -666,13 +706,39 @@ footer p {
         width: 50px;
         height: 50px;
     }
-    
+
+    article {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .move_portfolio {
+        width: auto;
+        height: auto;
+
+    }
+
+    .thumbnail {
+        height: 100%;
+
+    }
+
+    .contact_wrap {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    a.introduce {
+        margin: 5px;
+    }
 
 
 }
 
-@media screen and (max-width:425px) {
-    .introduce {
+/* @media screen and (max-width:425px) {
+    .introduce .introduce {
         font-size: 1rem;
     }
-}
+} */
