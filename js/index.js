@@ -15,6 +15,12 @@ let lastPage = content.length - 2;
 
 let short = document.getElementsByClassName('short').length - 1;
 
+let icon_button = document.querySelectorAll('.icon.button');
+let introduce_button = document.querySelectorAll('.introduce.button');
+
+// let skill_image = document.querySelectorAll('.skill_image');
+
+// console.log(skill_image);
 
 // nav를 누르면 하위 레이아웃을 활성화 시켜주는 함수
 function Switch_toggle(ID) {
@@ -183,4 +189,40 @@ window.onload = function deviceCheck() {
         }
     }
 
+    for (let i = 0; i < move_point_list.length; i++) {
+        move_point_list[i].addEventListener('click', function () {
+            page = i;
+    
+            if (page < lastPage) {
+                wrap.style.top = page * -100 + 'vh';
+            }
+            else {
+                wrap.style.setProperty('top', 'calc(-200vh - 300px)');
+            }
+            // wrap.style.top = page * -100 + 'vh';
+            // console.log(page);
+        });
+    }
+
 }
+
+console.log(icon_button)
+
+for (let i = 0; i < icon_button.length; i++) {
+    introduce_button[i].addEventListener('mouseover', function () {
+        icon_button[i].style.opacity = 0;
+    });
+    introduce_button[i].addEventListener('mouseout', function () {
+        icon_button[i].style.opacity = 1;
+    });
+
+}
+
+
+
+
+// skill_image.forEach(skill_image => {
+//     addEventListener("mouseover", function () {
+//         document.documentElement.style.setProperty('--toggle-message', skill_image.getAttribute("alt"));
+//     })
+// });
