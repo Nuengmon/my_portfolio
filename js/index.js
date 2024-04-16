@@ -18,9 +18,6 @@ let short = document.getElementsByClassName('short').length - 1;
 let icon_button = document.querySelectorAll('.icon.button');
 let introduce_button = document.querySelectorAll('.introduce.button');
 
-// let skill_image = document.querySelectorAll('.skill_image');
-
-// console.log(skill_image);
 
 // nav를 누르면 하위 레이아웃을 활성화 시켜주는 함수
 function Switch_toggle(ID) {
@@ -119,6 +116,8 @@ Hamburger.addEventListener('click', function () {
 
 history.scrollRestoration = "manual"
 
+
+// PC, 모바일을 나눠 원페이지 스크롤을 작동시킬지에 대한 여부를 판단
 window.onload = function deviceCheck() {
 
     const user = navigator.userAgent;
@@ -208,6 +207,8 @@ window.onload = function deviceCheck() {
 
 console.log(icon_button)
 
+
+// contact 부분 button hover시 이미지 투명도 조절
 for (let i = 0; i < icon_button.length; i++) {
     introduce_button[i].addEventListener('mouseover', function () {
         icon_button[i].style.opacity = 0;

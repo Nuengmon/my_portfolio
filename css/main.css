@@ -82,23 +82,18 @@ body {
 }
 
 header {
-    /* margin-top: 16px; */
     transition: all 0.2s;
     flex-shrink: 0;
     flex-grow: 0;
     position: relative;
     z-index: 10000;
-    /* height: initial; */
     transition: all 0.2s;
-    /* width: 0px; */
 }
 
 
 .main {
     position: relative;
-    /* top: 16px; */
     top: 0;
-    /* background-color: rgba(var(--bgc), 0.8); */
     min-height: 100vh;
     flex-shrink: 1;
     flex-grow: 1;
@@ -114,7 +109,6 @@ header {
 
 nav {
     position: relative;
-    /* right: 72px; */
     width: 48px;
     height: 100%;
     margin: 0px 12px;
@@ -279,13 +273,11 @@ nav {
 
 .welcome {
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     padding: 10px 0px;
     font-size: 5rem;
     font-weight: bold;
-    /* margin: 10px; */
     border-bottom: 1px solid #333;
     height: 100vh;
     background-image: url(../image/code_bg.jpg);
@@ -315,7 +307,6 @@ nav {
 
 
 .content {
-    /* margin: 20px 0px; */
     height: 100vh;
 }
 
@@ -365,7 +356,6 @@ h3 {
     text-align: center;
     font-weight: bold;
     font-size: 1.5rem;
-    /* flex-grow : 1; */
 }
 
 
@@ -377,9 +367,7 @@ h3 {
 
 .profile {
     position: relative;
-    /* margin: 0 auto; */
     max-width: 100%;
-    /* min-width: 30%; */
     border-radius: 1rem;
     top: 50%;
     transform: translateY(-50%);
@@ -559,8 +547,6 @@ h3 {
 
 
 .move_portfolio.button
-
-/*, .icon.button */
     {
     padding: 20px;
 }
@@ -625,26 +611,11 @@ h3 {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    /* margin: 20px; */
     border-radius: 10px;
     transition: all 0.2s linear;
 
 
 }
-
-/* 
-.thumbnail_wrap {
-    overflow: hidden;
-    border-radius: 10px;
-    width: auto;
-    min-height: 30vh;
-    position: relative;
-    margin : auto;
-} */
-/* 
-.thumbnail:hover {
-    transform: scale(1.05);
-} */
 
 .hamburger {
     position: relative;
@@ -661,7 +632,6 @@ h3 {
     box-sizing: border-box;
 
 }
-
 
 
 .hamburger span {
@@ -686,7 +656,6 @@ h3 {
     bottom: 0;
 }
 
-/* type-01 */
 /* 중앙 라인이 고정된 자리에서 투명하게 사라지며 상하라인 회전하며 엑스자 만들기 */
 .hamburger.active span:nth-of-type(1) {
     -webkit-transform: translateY(13px) rotate(-45deg);
@@ -720,10 +689,6 @@ div.content:last-of-type {
     justify-content: space-around;
     text-align: center;
 }
-
-/* div.content:last-of-type p:first-of-type {
-    color: rgb(var(--system-color));
-} */
 
 .contact_wrap {
     display: flex;
@@ -814,11 +779,6 @@ footer p {
 
     }
 
-    /* .thumbnail_wrap{
-        width: auto;
-        height: auto;
-    } */
-
     .tool_image_wrap::after {
         top: -34px;
         left: 50%; 
@@ -856,9 +816,3 @@ footer p {
 
 
 }
-
-/* @media screen and (max-width:425px) {
-    .introduce .introduce {
-        font-size: 1rem;
-    }
-} */
